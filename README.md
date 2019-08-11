@@ -3,3 +3,5 @@ Breaks up text received to allow ordering, only good for static, repeated messag
 
 Use case:
 An uneditable message that was no longer relevent needed altering.  This could've been achived in an OA escalation rule but the original message includes a problem filename, which is useful in the alert and couldn't be added via AO rule.
+
+Working on an alternative which will report the problem file with variable text.
