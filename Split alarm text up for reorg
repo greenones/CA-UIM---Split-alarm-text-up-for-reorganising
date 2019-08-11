@@ -1,0 +1,28 @@
+ --Gets Alarm from UIM
+a = alarm.get()
+ 
+--Builds empty table
+local words = {}
+ 
+--Defines b a message text
+   b = a.message
+ 
+--Index all characters within message text
+      for i in string.gmatch(b, "%w+") do
+ 
+--Insert mesage text into empty table
+       table.insert(words, i)
+ 
+--Prints table for testing, makes the words visible
+--      print(i)
+ 
+end
+ 
+message = "Report not created - Report name = " ..words[17] .." " ..words[18] .." " ..words[19] .." - Wiki - "
+SUPPKEY = words[17]
+SUBSYS = "INSERT SUBSYSTEM"
+SOURCE = "INSERT IP/HOSTNAME"
+ 
+--Sends informational message - upgrade as required
+nimbus.alarm(1, message, SUPPKEY, SUBSYS, SOURCE)
+ 
